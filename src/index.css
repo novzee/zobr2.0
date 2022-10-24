@@ -1,0 +1,27 @@
+:root{
+  --black: #000104;
+  --white: #fcfcfc;
+}
+@font-face {
+  font-family: 'SyncopateBoldCyr';
+  src: url(./SyncopateBoldCyr.otf);
+}
+*{
+  font-family: 'SyncopateBoldCyr', sans-serif;
+  text-transform: uppercase;
+}
+body{
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0 200px;
+}
+@media screen and (max-width: 1024px) {
+    body{
+      padding: 0 100px;
+    }
+}
+@media screen and (max-width: 429px) {
+  body{
+    padding: 0 50px;
+  }
+}
