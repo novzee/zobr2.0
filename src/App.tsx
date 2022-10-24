@@ -4,18 +4,39 @@ import s from './App.module.scss'
 import { Formik, Form, Field } from 'formik'
 
 function App() {
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState<any[]>([])
   const [pages, setPages] = useState(0)
   const [title, setTitle] = useState('Рекомендации')
+
+  interface films{
+    data: Film[],
+    pagesCount: number,
+    films: Film[]
+  }
+  interface Film  {
+    countries: any,
+    filmId: number,
+    genres: any,
+    nameEn: string,
+    nameRu: string,
+    posterUrl: string,
+    posterUrlPreview: string,
+    rating: string,
+    ratingChange: any,
+    ratingVoteCount: number,
+    year: string,
+  }
+
   useEffect(() => {
-    axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top`,
+    axios.get<films>(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top`,
           {headers: {
             'X-API-KEY': '140dabd4-b4ac-4d65-b281-62e8d3b615c4',
             'Content-Type': 'application/json',
           }}
           )
-          .then(function(responce:any) {
+          .then(function(responce) {
             console.log(responce.data)
+            console.log(responce.data.films)
             setItems([...responce.data.films])
             setPages(responce.data.pagesCount)
             console.log(pages)
@@ -34,7 +55,7 @@ function App() {
       onSubmit={
         (values) => {
           if (values.Name != '')
-          {axios.get(`https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${values.Name}`, 
+          {axios.get<films>(`https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${values.Name}`, 
           {headers: {
             'X-API-KEY': '140dabd4-b4ac-4d65-b281-62e8d3b615c4',
             'Content-Type': 'application/json',
@@ -49,9 +70,9 @@ function App() {
         } 
       }
     >
-      <Form className='formik'>
+      <Form className={s.Form}>
         <Field className='input' name="Name" />
-        <button type="submit">Искать фильм</button>
+        <button type="submit">поиск</button>
       </Form>
     </Formik>
         <div className={s.Top}>
