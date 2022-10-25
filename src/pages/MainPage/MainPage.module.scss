@@ -10,7 +10,7 @@
         flex-direction: column-reverse;
     }
     @media screen and (max-width: 429px) {
-        padding-top: 50px;
+        padding-top: 0px;
     }
 }
 
@@ -41,21 +41,28 @@
         }
         input{
             width: 100%;
+            margin: 0;
         }
         button{
             margin: 0;
             width: fit-content;
             margin-top: 10px;
+            font-size: 10px;
         }
     }
     .UpperSlide{
         position: sticky;
         top: 0;
+        left: 0;
         background-color: var(--black);
         padding-bottom: 20px;
+        padding-top: 5px;
+        @media screen and (max-width: 429px) {
+            padding-bottom: 5px;
+        }
     }
     .Top{
-        margin: 40px 0;
+        margin: 40px 0 20px;
         font-size: 32px;
         transition-duration: 0.3s;
         &:hover{
@@ -71,8 +78,7 @@
             position:static;
         }
         @media screen and (max-width: 429px) {
-            font-size: 18px;
-            margin-top: 80px;
+            font-size: 12px;
         }
     }
     .Items{
@@ -173,16 +179,14 @@
         }
     }
     @media screen and (max-width: 769px) {
-        top: 120px;
-        height: 50px;
-        width: 100%;
+        display: none;
         ul{
             display: none;
         }
     }
     @media screen and (max-width: 429px) {
         h1{
-            font-size: 24px;
+            font-size: 16px;
         }
     }
 }
