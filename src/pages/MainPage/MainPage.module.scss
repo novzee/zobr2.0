@@ -56,7 +56,7 @@
         left: 0;
         background-color: var(--black);
         padding-bottom: 20px;
-        padding-top: 5px;
+        padding-top: 10px;
         @media screen and (max-width: 429px) {
             padding-bottom: 5px;
         }
@@ -78,7 +78,7 @@
             position:static;
         }
         @media screen and (max-width: 429px) {
-            font-size: 12px;
+            font-size: 16px;
         }
     }
     .Items{
@@ -152,7 +152,6 @@
     }
 }
 .RightSide{
-    position: sticky;
     right: 0;
     top: 150px;
     height: fit-content;
@@ -173,20 +172,32 @@
             font-size: 20px;
         }
     }
+    .burger{
+        display: none;
+        height: 50px;
+        width: 50px;
+    }
     @media screen and (max-width: 1500px) {
         h1{
             font-size: 30px;
         }
     }
     @media screen and (max-width: 769px) {
-        display: none;
+        padding-top: 30px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        .burger{
+            display: block;
+        }
+        width: 100%;
         ul{
             display: none;
         }
     }
     @media screen and (max-width: 429px) {
         h1{
-            font-size: 16px;
+            font-size: 20px;
         }
     }
 }
