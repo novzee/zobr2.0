@@ -72,7 +72,7 @@ const MainPage = () => {
         }
       >
         <Form className={s.Form}>
-          <Field className='input' name="Name" />
+          <Field className='input' placeholder='Введите Название' name="Name" />
           <button type="submit">поиск</button>
         </Form>
       </Formik>

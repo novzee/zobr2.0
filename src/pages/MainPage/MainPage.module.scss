@@ -23,6 +23,9 @@
         color: var(--white);
         background-color: var(--black);
         border-bottom: 1px solid var(--white);
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.2);
+        }
     }
     button{
         height: 40px;
@@ -186,7 +189,7 @@
         padding-top: 30px;
         flex-direction: row-reverse;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         .burger{
             display: block;
         }
