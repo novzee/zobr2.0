@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+        {"source": "/movie", "destination": "/movie"},
+        {"source": "/(.*)", "destination": "/"}
+      ],
+      "trailingSlash": false
+}
