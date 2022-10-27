@@ -2,6 +2,7 @@ import s from './MainPage.module.scss'
 import { Formik, Form, Field } from 'formik'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const MainPage = () => {
     const [items, setItems] = useState<any[]>([])
@@ -83,9 +84,9 @@ const MainPage = () => {
           <div className={s.Items}>
             {items.map((el) => (
               <div className={s.Item}>
-                <div className={s.Item_img} style={{backgroundImage: `url(${el.posterUrlPreview})`}}><div className={s.back}>
+                <Link to={`/movie/${el.filmId}`}><div className={s.Item_img} style={{backgroundImage: `url(${el.posterUrlPreview})`}}><div className={s.back}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" d="m11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
-                  </div></div>
+                  </div></div></Link>
                 <p>{el.nameRu}</p>
               </div>
             ))}
