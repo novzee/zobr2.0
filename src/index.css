@@ -38,3 +38,15 @@ body::-webkit-scrollbar-thumb{
     padding: 0 30px;
   }
 }
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+a:active{
+  text-decoration: none;
+  color: var(--white);
+}
+a:visited{
+  text-decoration: none;
+  color: var(--white);
+}

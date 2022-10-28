@@ -15,6 +15,7 @@
 }
 
 .LeftSide{
+    padding-bottom: 50px;
     width: 80%;
     input{
         height: 40px;
@@ -98,11 +99,11 @@
     .Item{
         
         width: calc(25% - 15px);
-        height: 29vw;
+        height: 32vw;
         overflow: hidden;
         &_img{
             width: 100%;
-            height: 80%;
+            height: 84%;
             background-position: 50%;
             background-size: cover;
         }
@@ -148,9 +149,9 @@
         }
         @media screen and (max-width: 769px) {
             width: calc(33% - 15px);
-            height: 29vw;
+            height: 40vw;
             p{
-                font-size: 12px;
+                font-size: 10px;
             }
         }
         @media screen and (max-width: 429px) {
@@ -178,9 +179,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 30px;
+        gap: 26px;
         li{
+            position: relative;
             font-size: 20px;
+            height: 26px;
         }
     }
     .burger{
@@ -214,4 +217,36 @@
 }
 .soon{
     opacity: 0.05;
+}
+.active{
+    height: 26px;
+    border-bottom: 2px solid var(--white);
+}
+.mobile{
+    display: none;
+    @media screen and (max-width: 769px) {
+        display: flex;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    display: flex;
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 26px;
+        li{
+            position: relative;
+            font-size: 20px;
+            height: 26px;
+        }
+    }
+    .activeBurger{
+        width: 100vw;
+        height: 100vh;
+        padding: 50px 30px;
+    }
+    z-index: 1999;
+    background-color: var(--black);
+}
 }
