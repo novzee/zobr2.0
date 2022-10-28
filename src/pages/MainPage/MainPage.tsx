@@ -117,10 +117,6 @@ const MainPage = () => {
             <li onClick={() => setBurger(false)} className={typeA == 'series' ? s.active : ''}><Link to='/series'>сериалы</Link></li>
             <li onClick={() => setBurger(false)} className={typeA == 'anime' ? s.active : ''}><Link to='/anime' >Аниме</Link></li>
           </ul>
-          <ul className={s.soon}>
-            <li onClick={() => setBurger(false)}>Понравилось</li>
-            <li onClick={() => setBurger(false)}>Просмотренные</li>
-          </ul>
         </div>
         </div>
         </div>
