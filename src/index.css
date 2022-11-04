@@ -1,0 +1,52 @@
+:root{
+  --black: #000104;
+  --white: #fcfcfc;
+}
+@font-face {
+  font-family: 'SyncopateBoldCyr';
+  src: url(./SyncopateBoldCyr.otf);
+}
+*{
+  font-family: 'SyncopateBoldCyr', sans-serif;
+  text-transform: uppercase;
+}
+body{
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0 200px;
+}
+body::-webkit-scrollbar{
+  background-color: #000104;
+  color: #000104;
+  width: 12px;
+}
+body::-webkit-scrollbar-track{
+  background-color: var(--black);
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #fcfcfc26;
+  border-radius: 10px;
+  border: 3px solid var(--black);
+}
+@media screen and (max-width: 1024px) {
+    body{
+      padding: 0 100px;
+    }
+}
+@media screen and (max-width: 429px) {
+  body{
+    padding: 0 30px;
+  }
+}
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+a:active{
+  text-decoration: none;
+  color: var(--white);
+}
+a:visited{
+  text-decoration: none;
+  color: var(--white);
+}
