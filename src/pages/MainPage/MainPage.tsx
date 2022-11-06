@@ -104,10 +104,6 @@ const MainPage = () => {
             <li className={typeA == 'series' ? s.active : ''}><Link to='/series'>сериалы</Link></li>
             <li className={typeA == 'anime' ? s.active : ''}><Link to='/anime' >Аниме</Link></li>
           </ul>
-          <ul className={s.soon}>
-            <li>Понравилось</li>
-            <li>Просмотренные</li>
-          </ul>
           <svg onClick={() => setBurger(!burger)} className={s.burger} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18H3v-2h18v2Zm0-5H3v-2h18v2Zm0-5H3V6h18v2Z"/></svg>
 
         </div>

@@ -61,10 +61,6 @@
         left: 0;
         background-color: var(--black);
         padding-bottom: 20px;
-        padding-top: 10px;
-        @media screen and (max-width: 429px) {
-            padding-bottom: 5px;
-        }
     }
     .Top{
         margin: 40px 0 20px;
@@ -97,7 +93,6 @@
         }
     }
     .Item{
-        
         width: calc(25% - 15px);
         height: 32vw;
         overflow: hidden;
@@ -143,15 +138,17 @@
             font-size: 24px;
         }
         @media screen and (max-width: 1500px) {
+            width: calc(33.333% - 15px);
             p{
                 font-size: 16px;
             }
         }
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 850px) {
             width: calc(33% - 15px);
             height: 40vw;
             p{
-                font-size: 10px;
+                margin-top: 12px;
+                font-size: 14px;
             }
         }
         @media screen and (max-width: 429px) {
