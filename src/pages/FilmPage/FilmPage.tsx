@@ -1,19 +1,16 @@
 import s from './FilmPage.module.scss'
 import { Link, useParams } from "react-router-dom";
-import axios from 'axios'
 import roll from '../../assets/roll3.svg'
 
 
 const FilmPage = () => {
     const {id} = useParams()
-    axios.get("https://videocdn.tv/api/movies", {headers: { "API_TOKEN" : "nmOZ07IlX0fvpY6ti4Wa4XqvapICIF9n"}}
-    ).then((responce) => console.log(responce))
     return(
         <div className={s.FilmPage}>
             <div className={s.LeftSide}>
                 <div className={s.window}>
                     <img src={roll}/>
-                    <iframe src={`//25548813.svetacdn.in/N7TuPYwQNCQx?kp_id=${id}`} width="100%" height="100%" frameBorder="0" allowFullScreen></iframe>
+                    <iframe src={`https://2554888813.svetacdn.in/N7TuPYwQNCQx?kp_id=${id}`} width="100%" height="100%" frameBorder="0" allowFullScreen></iframe>
                 </div>
                 <div className={s.info}>
                     <h1>Name</h1>
