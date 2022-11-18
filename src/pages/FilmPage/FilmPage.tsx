@@ -11,7 +11,7 @@ const FilmPage = () => {
         <div className={s.FilmPage}>
             <div className={s.LeftSide}>
                 <div className={s.window}>
-                    <iframe src={`https://138493.annacdn.cc/N7TuPYwQNCQx?kp_id=${id}`} width="100%" height="100%" frameBorder="0" allowFullScreen></iframe>
+                    <iframe src={`//25548813.svetacdn.in/N7TuPYwQNCQx?kp_id=${id}`} width="100%" height="100%" frameBorder="0" allowFullScreen></iframe>
                 </div>
                 <div className={s.info}>
                     <h1>Name</h1>
