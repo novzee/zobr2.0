@@ -7,15 +7,15 @@ import {
   } from "framer-motion"
   export const Example = () => {
     const x:any = useMotionValue(0);
-    const xInput = [-100, 0, 100];
+    const xInput = [-50, 0, 50];
     const color = useTransform(x, xInput, [
       "#e71d36",
       "#9b5de5",
       "#02c39a"
     ]);
-    const tickPath = useTransform(x, [10, 100], [0, 1]);
+    const tickPath = useTransform(x, [0, 30], [0, 1]);
     const crossPathA = useTransform(x, [-10, -55], [0, 1]);
-    const crossPathB = useTransform(x, [-50, -100], [0, 1]);
+    const crossPathB = useTransform(x, [-20, -30], [0, 1]);
     const rotate = useTransform(
         x,
         [0, 100],
@@ -23,13 +23,14 @@ import {
         { clamp: false }
       )
     return (
-      <motion.div className={s.container} id='slide'>
+      <motion.div className={s.container} id='slide'
+      style={{ x }}
+      dragConstraints={{ left: 0, right: 0 }}
+      drag="x">
       <motion.img className={s.Slider_Card} style={{rotate, x}} src='https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/e410c71f-baa1-4fe5-bb29-aedb4662f49b/360'/>
         <motion.div
           className={s.box}
-          style={{ x }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
+
         >
           <svg className="progress-icon" viewBox="0 0 50 50">
             <motion.path
