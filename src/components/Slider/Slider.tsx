@@ -14,8 +14,8 @@ import {
       "#02c39a"
     ]);
     const tickPath = useTransform(x, [0, 30], [0, 1]);
-    const crossPathA = useTransform(x, [-10, -55], [0, 1]);
-    const crossPathB = useTransform(x, [-20, -30], [0, 1]);
+    const crossPathA = useTransform(x, [-20, -55], [0, 1]);
+    const crossPathB = useTransform(x, [-20, -25], [0, 1]);
     const rotate = useTransform(
         x,
         [0, 100],
@@ -23,50 +23,18 @@ import {
         { clamp: false }
       )
     return (
+      <>
       <motion.div className={s.container} id='slide'
       style={{ x }}
       dragConstraints={{ left: 0, right: 0 }}
       drag="x">
       <motion.img className={s.Slider_Card} style={{rotate, x}} src='https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/e410c71f-baa1-4fe5-bb29-aedb4662f49b/360'/>
-        <motion.div
-          className={s.box}
-
-        >
-          <svg className="progress-icon" viewBox="0 0 50 50">
-            <motion.path
-              fill="none"
-              strokeWidth="2"
-              stroke={color}
-              d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
-              style={{ translateX: 5, translateY: 5 }}
-            />
-            <motion.path
-              fill="none"
-              strokeWidth="2"
-              stroke={color}
-              d="M14,26 L 22,33 L 35,16"
-              strokeDasharray="0 1"
-              style={{ pathLength: tickPath }}
-            />
-            <motion.path
-              fill="none"
-              strokeWidth="2"
-              stroke={color}
-              d="M17,17 L33,33"
-              strokeDasharray="0 1"
-              style={{ pathLength: crossPathA }}
-            />
-            <motion.path
-              fill="none"
-              strokeWidth="2"
-              stroke={color}
-              d="M33,17 L17,33"
-              strokeDasharray="0 1"
-              style={{ pathLength: crossPathB }}
-            />
-          </svg>
-        </motion.div>
       </motion.div>
+      <div className={s.container_buttons}>
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M128 28a100 100 0 1 0 100 100A100.2 100.2 0 0 0 128 28Zm0 192a92 92 0 1 1 92-92a92.1 92.1 0 0 1-92 92Zm34.8-121.2L133.7 128l29.1 29.2a3.9 3.9 0 0 1 0 5.6a3.9 3.9 0 0 1-5.6 0L128 133.7l-29.2 29.1a3.9 3.9 0 0 1-5.6 0a3.9 3.9 0 0 1 0-5.6l29.1-29.2l-29.1-29.2a4 4 0 0 1 5.6-5.6l29.2 29.1l29.2-29.1a4 4 0 1 1 5.6 5.6Z"/></svg></button>
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M174.9 101.2a4.1 4.1 0 0 1-.1 5.7l-58.7 56a4.3 4.3 0 0 1-2.8 1.1a3.9 3.9 0 0 1-2.7-1.1l-29.4-28a4 4 0 1 1 5.6-5.8l26.5 25.4l55.9-53.4a4.1 4.1 0 0 1 5.7.1ZM228 128A100 100 0 1 1 128 28a100.2 100.2 0 0 1 100 100Zm-8 0a92 92 0 1 0-92 92a92.1 92.1 0 0 0 92-92Z"/></svg></button>
+      </div>
+      </>
     );
   };
 
