@@ -10,9 +10,9 @@ const Slider = () => {
   const x:any = useMotionValue(0);
     const xInput = [-50, 0, 50];
     const backgroundColor = useTransform(x, xInput, [
-      "#e71d3626",
-      "#9b5de526",
-      "#02c39a26"
+      "#e71d361a",
+      "#9b5de51a",
+      "#02c39a1a"
     ]);
     const rotate = useTransform(
         x,
