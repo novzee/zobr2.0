@@ -12,6 +12,7 @@
         padding-top: 50px;
     }
 }
+
 .LeftSide{
     width: 80%;
     .window{
@@ -20,12 +21,15 @@
         background-color: rgba(255, 255, 255, 0.192);
     }
     .info{
-        padding: 30px 0;
+        padding: 30px 0 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
         h1{
-            font-size: 24px
+            font-size: 23px;
+            @media screen and (max-width: 550px){
+                font-size: 16px;
+            }
         }
     }
     @media screen and (max-width: 429px) {
@@ -82,4 +86,32 @@
 }
 iframe{
     z-index: 399;
+}
+.description{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 23px;
+    opacity: 0.7;
+    @media screen and (max-width: 550px) {
+        margin-top: 10px;
+        font-size: 10px;
+        color: var(--white);
+        line-height: 13px;
+    }
+    
+}
+.h3{
+    font-size: 12px;
+    opacity: 0.4;
+    @media screen and (max-width: 550px) {
+        font-size: 8px;
+    }
+}
+.genres{
+    display: flex;
+    gap: 5px;
+    max-width: 80%;
+}
+.description{
+    margin-top: 30px;
 }
