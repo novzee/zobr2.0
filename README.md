@@ -7,6 +7,8 @@ React + TypeScript + SCSS
 
 # Link: [zobr2](https://zobr2.vercel.app) 
 
+# Preview
+
 ### Main Page
 
 ![Preview](https://github.com/TePMo-Tapo4eK/zobr2.0/blob/main/preview/preview.png)
